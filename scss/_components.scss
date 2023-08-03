@@ -1,0 +1,185 @@
+body {
+width: 136.6rem;
+
+.header {
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5.3rem;
+    margin-right: 7.3rem;
+    
+
+    .nav {
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            list-style-type: none;
+            margin: 5.2rem 0rem 5.2rem 5.2rem;
+                .active {
+                    color: #6CB43F;
+                    border-bottom: .2rem solid #6CB43F;
+
+                }
+                
+                a {
+                    float: left;
+                    text-align: center;
+                    margin-right: 5.2rem;
+                    color: #798296;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                   
+                }
+
+                .icon {
+                    width: 1.548rem;
+                    height: 1.603rem;
+                    margin-left: 0;
+                    
+                }
+            }
+            .lang-bar {
+                align-items: center;
+                padding-left: 5.2rem;
+                
+                .lang {
+                    
+                    label {
+                        color: #798296;
+                    }
+                    input {
+                        border-style: solid;
+                        border-color: #E1E1E1;
+                        border-radius: .8rem;
+                        width: 9.9rem;
+                        height: 5.5rem;
+                        text-align: center;
+                        outline: none;
+                        box-sizing: border-box;
+                       
+                    }
+              
+                }
+            }
+            
+        }
+    }
+    .landing {
+        width: auto;
+        height: 100vh;
+       
+        .background-img {
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: relative;
+        
+            img {
+                width: 105.4%;
+                height: 100vh;
+                object-fit: cover;
+                position: relative;
+            
+            }
+            .rect {
+                width: 53.1rem;
+                position: absolute;
+                top: 1rem;
+                left: 0;
+                color: #fff;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            h2 {
+                width: 58.1rem;
+                position: absolute;
+                top: 26.2rem;
+                left: 11.7rem;
+                color: #fff;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            p {
+                width: 58.1rem;
+                position: absolute;
+                top: 37.9rem;
+                left: 11.7rem;
+                width: 36.1rem;
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: regular;
+            }
+            form {
+
+                label {
+                width: 17.1rem;
+                height: 5.4rem;
+                position: absolute;
+                top: 54.3rem;
+                left: 11.8rem;
+                
+            
+                input {
+                    width: 17.1rem;
+                    height: 3.4rem;
+                    border-radius: 2rem;
+                    border-color: transparent;
+                    background-color: rgba($color: #fff, $alpha: .3);
+                    padding: auto;
+                    border-style: solid;
+                    text-align: center;
+                    outline: none;
+                    box-sizing: border-box;
+                    
+                }
+            }
+            span {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background-color: #fff;
+                position: absolute;
+                top: 54.5rem;
+                left: 25.7rem;
+                img {
+                    width: .482rem;
+                    height: .964rem;
+                    position: absolute;
+                    top: .9rem;
+                    left: 1.4rem;
+                }
+            }
+        }
+        .circle-1 {
+            width: 5.43rem;
+            height: 5.43rem;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 68.8rem;
+            left: 115.64rem;
+            color: black;
+            align-items: center;
+            border: #707070, 3;
+
+        }
+        .circle-2 {
+            width: 5.43rem;
+            height: 5.43rem;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 68.8rem;
+            left: 122.64rem;
+           
+            box-shadow: .05rem .05rem #707070;
+
+        }
+    }
+        
+    }
+}

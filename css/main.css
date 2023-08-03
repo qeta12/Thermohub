@@ -1,0 +1,193 @@
+body {
+  width: 136.6rem;
+}
+body .header {
+  width: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 5.3rem;
+  margin-right: 7.3rem;
+}
+body .header .nav .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  margin: 5.2rem 0rem 5.2rem 5.2rem;
+}
+body .header .nav .nav-content .active {
+  color: #6CB43F;
+  border-bottom: 0.2rem solid #6CB43F;
+}
+body .header .nav .nav-content a {
+  float: left;
+  text-align: center;
+  margin-right: 5.2rem;
+  color: #798296;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+body .header .nav .nav-content .icon {
+  width: 1.548rem;
+  height: 1.603rem;
+  margin-left: 0;
+}
+body .header .nav .lang-bar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5.2rem;
+}
+body .header .nav .lang-bar .lang label {
+  color: #798296;
+}
+body .header .nav .lang-bar .lang input {
+  border-style: solid;
+  border-color: #E1E1E1;
+  border-radius: 0.8rem;
+  width: 9.9rem;
+  height: 5.5rem;
+  text-align: center;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .landing {
+  width: auto;
+  height: 100vh;
+}
+body .landing .background-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body .landing .background-img img {
+  width: 105.4%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+body .landing .background-img .rect {
+  width: 53.1rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+body .landing .background-img h2 {
+  width: 58.1rem;
+  position: absolute;
+  top: 26.2rem;
+  left: 11.7rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+body .landing .background-img p {
+  width: 58.1rem;
+  position: absolute;
+  top: 37.9rem;
+  left: 11.7rem;
+  width: 36.1rem;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: regular;
+}
+body .landing .background-img form label {
+  width: 17.1rem;
+  height: 5.4rem;
+  position: absolute;
+  top: 54.3rem;
+  left: 11.8rem;
+}
+body .landing .background-img form label input {
+  width: 17.1rem;
+  height: 3.4rem;
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: auto;
+  border-style: solid;
+  text-align: center;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .landing .background-img form span {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 54.5rem;
+  left: 25.7rem;
+}
+body .landing .background-img form span img {
+  width: 0.482rem;
+  height: 0.964rem;
+  position: absolute;
+  top: 0.9rem;
+  left: 1.4rem;
+}
+body .landing .background-img .circle-1 {
+  width: 5.43rem;
+  height: 5.43rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 68.8rem;
+  left: 115.64rem;
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #707070, 3;
+}
+body .landing .background-img .circle-2 {
+  width: 5.43rem;
+  height: 5.43rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 68.8rem;
+  left: 122.64rem;
+  -webkit-box-shadow: 0.05rem 0.05rem #707070;
+          box-shadow: 0.05rem 0.05rem #707070;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  width: 100vh;
+}
+
+body {
+  font-family: "FiraGO", sans-serif;
+}/*# sourceMappingURL=main.css.map */
