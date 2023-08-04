@@ -1,8 +1,10 @@
 body {
   width: 136.6rem;
 }
-body .header {
+body .container {
   width: 100vh;
+}
+body .container .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +17,7 @@ body .header {
   margin-left: 5.3rem;
   margin-right: 7.3rem;
 }
-body .header .nav .nav-content {
+body .container .header .nav .nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,36 +34,36 @@ body .header .nav .nav-content {
   list-style-type: none;
   margin: 5.2rem 0rem 5.2rem 5.2rem;
 }
-body .header .nav .nav-content .active {
-  color: #6CB43F;
+body .container .header .nav .nav-content .active {
+  color: var(--color-green);
   border-bottom: 0.2rem solid #6CB43F;
 }
-body .header .nav .nav-content a {
+body .container .header .nav .nav-content a {
   float: left;
   text-align: center;
   margin-right: 5.2rem;
-  color: #798296;
+  color: var(--color-grey-dark);
   font-size: 1.4rem;
   font-weight: 400;
   text-decoration: none;
 }
-body .header .nav .nav-content .icon {
+body .container .header .nav .nav-content .icon {
   width: 1.548rem;
   height: 1.603rem;
   margin-left: 0;
 }
-body .header .nav .lang-bar {
+body .container .header .nav .lang-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 5.2rem;
 }
-body .header .nav .lang-bar .lang label {
-  color: #798296;
+body .container .header .nav .lang-bar .lang label {
+  color: var(--color-grey-dark);
 }
-body .header .nav .lang-bar .lang input {
+body .container .header .nav .lang-bar .lang input {
   border-style: solid;
-  border-color: #E1E1E1;
+  border-color: var(--color-grey-light);
   border-radius: 0.8rem;
   width: 9.9rem;
   height: 5.5rem;
@@ -91,7 +93,7 @@ body .landing .background-img .rect {
   position: absolute;
   top: 1rem;
   left: 0;
-  color: #fff;
+  color: var(--color-white);
   font-size: 3rem;
   font-weight: bold;
 }
@@ -100,7 +102,7 @@ body .landing .background-img h2 {
   position: absolute;
   top: 26.2rem;
   left: 11.7rem;
-  color: #fff;
+  color: var(--color-white);
   font-size: 3rem;
   font-weight: bold;
 }
@@ -110,7 +112,7 @@ body .landing .background-img p {
   top: 37.9rem;
   left: 11.7rem;
   width: 36.1rem;
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.3rem;
   font-weight: regular;
 }
@@ -134,11 +136,36 @@ body .landing .background-img form label input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+body .landing .background-img form label input::-webkit-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::-moz-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input:-ms-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::-ms-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
 body .landing .background-img form span {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-white);
   position: absolute;
   top: 54.5rem;
   left: 25.7rem;
@@ -154,26 +181,286 @@ body .landing .background-img .circle-1 {
   width: 5.43rem;
   height: 5.43rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-white);
   position: absolute;
   top: 68.8rem;
   left: 115.64rem;
-  color: black;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: #707070, 3;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .landing .background-img .circle-1 a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 body .landing .background-img .circle-2 {
   width: 5.43rem;
   height: 5.43rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-white);
   position: absolute;
   top: 68.8rem;
   left: 122.64rem;
-  -webkit-box-shadow: 0.05rem 0.05rem #707070;
-          box-shadow: 0.05rem 0.05rem #707070;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .landing .background-img .circle-2 img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+}
+body .description {
+  background-color: #F5FAFC;
+  width: 100%;
+  height: 30vh;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6rem;
+}
+body .description h2 {
+  color: var(--color-green);
+  font-size: 30;
+  font-weight: bold;
+}
+body .description .text {
+  width: 68rem;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+body .clients {
+  padding: 3rem;
+}
+body .clients h2 {
+  padding: 3rem 0 3rem 59rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-green);
+  font-size: 30;
+  font-weight: bold;
+}
+body .clients-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+body .clients-logos-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  border-style: solid #E1E1E1;
+}
+body .clients-logos-description .line-coca {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: -9.7rem;
+}
+body .clients-logos-description .line-nike {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: 3rem;
+}
+body .clients-logos-description-container-1, body .clients-logos-description-container-3, body .clients-logos-description-container-4 {
+  padding: 2rem 4rem;
+  border: 0.1rem solid #E1E1E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+body .clients-logos-description-container-1 .line, body .clients-logos-description-container-3 .line, body .clients-logos-description-container-4 .line {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: 6rem;
+}
+body .clients-logos-description-container-1 span, body .clients-logos-description-container-3 span, body .clients-logos-description-container-4 span {
+  text-align: center;
+}
+body .clients-logos-description-container-2 {
+  width: 15.4rem;
+  height: 10.7rem;
+  padding: 0.8rem 2rem;
+  border: 0.1rem solid #E1E1E1;
+}
+body .clients-logos-description-container-2 img {
+  width: 13.6rem;
+  height: 7.9rem;
+}
+body .clients-logos-description-container-2 span {
+  margin-left: 3.9rem;
+}
+body .clients-circle-1 {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 138.8rem;
+  left: 63.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .clients-circle-1 a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 1.3rem;
+  left: 1.7rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+body .clients-circle-2 {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 138.8rem;
+  left: 69.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .clients-circle-2 a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 1.3rem;
+  left: 2rem;
+}
+body .contact-container {
+  background-color: #FDFDFD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  margin: 5rem;
+  position: relative;
+}
+body .contact-container .map {
+  margin-top: 5rem;
+  width: 60%;
+  height: 19.9rem;
+}
+body .contact-container-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+body .contact-container-details span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+body .contact-container-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: -7rem;
+  margin-left: 0.5rem;
+}
+body .contact-container-logos .facebook,
+body .contact-container-logos .youtube,
+body .contact-container-logos .instagram {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 0.2rem solid #EFEFEF;
+  position: relative;
+}
+body .contact-container-logos .facebook img,
+body .contact-container-logos .youtube img,
+body .contact-container-logos .instagram img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+body .contact-container .legal {
+  position: absolute;
+  top: 75%;
+  left: 80%;
+}
+body .contact-container .legal span {
+  color: var(--color-green);
+}
+
+:root {
+  --color-white: #fff;
+  --color-green: #6CB43F;
+  --color-grey-light:#E1E1E1;
+  --color-grey-dark: #798296;
 }
 
 * {
@@ -190,4 +477,473 @@ html {
 
 body {
   font-family: "FiraGO", sans-serif;
+}
+
+body {
+  width: 136.6rem;
+}
+body .container {
+  width: 100vh;
+}
+body .container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 5.3rem;
+  margin-right: 7.3rem;
+}
+body .container .header .nav .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  margin: 5.2rem 0rem 5.2rem 5.2rem;
+}
+body .container .header .nav .nav-content .active {
+  color: var(--color-green);
+  border-bottom: 0.2rem solid #6CB43F;
+}
+body .container .header .nav .nav-content a {
+  float: left;
+  text-align: center;
+  margin-right: 5.2rem;
+  color: var(--color-grey-dark);
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+body .container .header .nav .nav-content .icon {
+  width: 1.548rem;
+  height: 1.603rem;
+  margin-left: 0;
+}
+body .container .header .nav .lang-bar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5.2rem;
+}
+body .container .header .nav .lang-bar .lang label {
+  color: var(--color-grey-dark);
+}
+body .container .header .nav .lang-bar .lang input {
+  border-style: solid;
+  border-color: var(--color-grey-light);
+  border-radius: 0.8rem;
+  width: 9.9rem;
+  height: 5.5rem;
+  text-align: center;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .landing {
+  width: auto;
+  height: 100vh;
+}
+body .landing .background-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body .landing .background-img img {
+  width: 105.4%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+body .landing .background-img .rect {
+  width: 53.1rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: bold;
+}
+body .landing .background-img h2 {
+  width: 58.1rem;
+  position: absolute;
+  top: 26.2rem;
+  left: 11.7rem;
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: bold;
+}
+body .landing .background-img p {
+  width: 58.1rem;
+  position: absolute;
+  top: 37.9rem;
+  left: 11.7rem;
+  width: 36.1rem;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  font-weight: regular;
+}
+body .landing .background-img form label {
+  width: 17.1rem;
+  height: 5.4rem;
+  position: absolute;
+  top: 54.3rem;
+  left: 11.8rem;
+}
+body .landing .background-img form label input {
+  width: 17.1rem;
+  height: 3.4rem;
+  border-radius: 2rem;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: auto;
+  border-style: solid;
+  text-align: center;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .landing .background-img form label input::-webkit-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::-moz-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input:-ms-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::-ms-input-placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form label input::placeholder {
+  color: var(--color-white);
+  font-size: 13;
+  font-weight: bold;
+}
+body .landing .background-img form .point {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  position: absolute;
+  top: 54.5rem;
+  left: 25.7rem;
+}
+body .landing .background-img form .point img {
+  width: 0.482rem;
+  height: 0.964rem;
+  position: absolute;
+  top: 0.9rem;
+  left: 1.4rem;
+}
+body .landing .background-img .circle-1 {
+  width: 5.43rem;
+  height: 5.43rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 68.8rem;
+  left: 115.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .landing .background-img .circle-1 a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+body .landing .background-img .circle-2-pro {
+  width: 5.43rem;
+  height: 5.43rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  position: absolute;
+  top: 68.8rem;
+  left: 122.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .landing .background-img .circle-2-pro img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+}
+body .description {
+  background-color: #F5FAFC;
+  width: 100%;
+  height: 30vh;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6rem;
+}
+body .description h2 {
+  color: var(--color-green);
+  font-size: 30;
+  font-weight: bold;
+}
+body .description .text {
+  width: 68rem;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+body .clients {
+  padding: 3rem;
+}
+body .clients h2 {
+  padding: 3rem 0 3rem 59rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-green);
+  font-size: 30;
+  font-weight: bold;
+}
+body .clients-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+body .clients-logos-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  border-style: solid #E1E1E1;
+}
+body .clients-logos-description .line-coca {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: -9.7rem;
+}
+body .clients-logos-description .line-nike {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: 3rem;
+}
+body .clients-logos-description-container-1, body .clients-logos-description-container-3, body .clients-logos-description-container-4 {
+  padding: 2rem 4rem;
+  border: 0.1rem solid #E1E1E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+body .clients-logos-description-container-1 .line, body .clients-logos-description-container-3 .line, body .clients-logos-description-container-4 .line {
+  width: 3.7rem;
+  height: 0.3rem;
+  margin-left: 6rem;
+}
+body .clients-logos-description-container-1 span, body .clients-logos-description-container-3 span, body .clients-logos-description-container-4 span {
+  text-align: center;
+}
+body .clients-logos-description-container-2 {
+  width: 15.4rem;
+  height: 10.7rem;
+  padding: 0.8rem 2rem;
+  border: 0.1rem solid #E1E1E1;
+}
+body .clients-logos-description-container-2 img {
+  width: 13.6rem;
+  height: 7.9rem;
+}
+body .clients-logos-description-container-2 span {
+  margin-left: 3.9rem;
+}
+body .clients-circle-1 {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 138.8rem;
+  left: 63.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .clients-circle-1 a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 1.3rem;
+  left: 1.7rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+body .clients-circle-2-pro {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  position: absolute;
+  top: 138.8rem;
+  left: 69.64rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0.01rem 0.01rem #707070;
+          box-shadow: 0.01rem 0.01rem #707070;
+}
+body .clients-circle-2-pro a img {
+  width: 0.579rem;
+  height: 1.157rem;
+  position: absolute;
+  top: 1.3rem;
+  left: 2rem;
+}
+body .contact-container {
+  background-color: #FDFDFD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  margin: 5rem;
+  position: relative;
+}
+body .contact-container .map {
+  margin-top: 5rem;
+  width: 60%;
+  height: 19.9rem;
+}
+body .contact-container-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+body .contact-container-details span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+body .contact-container-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: -7rem;
+  margin-left: 0.5rem;
+}
+body .contact-container-logos .facebook,
+body .contact-container-logos .instagram {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 0.2rem solid #EFEFEF;
+  position: relative;
+}
+body .contact-container-logos .facebook img,
+body .contact-container-logos .instagram img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+body .contact-container-logos .youtube-logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  border: 0.2rem solid #EFEFEF;
+  position: relative;
+}
+body .contact-container-logos .youtube-logo img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+body .contact-container .legal {
+  position: absolute;
+  top: 75%;
+  left: 80%;
+}
+body .contact-container .legal span {
+  color: var(--color-green);
 }/*# sourceMappingURL=main.css.map */
