@@ -1,10 +1,4 @@
-body {
-  width: 136.6rem;
-}
-body .container {
-  width: 100vh;
-}
-body .container .header {
+body .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,51 +11,53 @@ body .container .header {
   margin-left: 5.3rem;
   margin-right: 7.3rem;
 }
-body .container .header .nav .nav-content {
+body .header .nav {
+  width: 100%;
+}
+body .header .nav .nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   list-style-type: none;
-  margin: 5.2rem 0rem 5.2rem 5.2rem;
+  margin: 2.2rem 0rem 2.2rem 2.2rem;
 }
-body .container .header .nav .nav-content .active {
+body .header .nav .nav-content .active {
   color: var(--color-green);
   border-bottom: 0.2rem solid #6CB43F;
 }
-body .container .header .nav .nav-content a {
+body .header .nav .nav-content a {
   float: left;
   text-align: center;
-  margin-right: 5.2rem;
+  margin-right: 1.2rem;
   color: var(--color-grey-dark);
   font-size: 1.4rem;
   font-weight: 400;
   text-decoration: none;
 }
-body .container .header .nav .nav-content .icon {
+body .header .nav .nav-content .icon {
   width: 1.548rem;
   height: 1.603rem;
   margin-left: 0;
 }
-body .container .header .nav .lang-bar {
+body .header .nav .lang-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 5.2rem;
 }
-body .container .header .nav .lang-bar .lang label {
+body .header .nav .lang-bar .lang label {
   color: var(--color-grey-dark);
 }
-body .container .header .nav .lang-bar .lang input {
+body .header .nav .lang-bar .lang input {
   border-style: solid;
   border-color: var(--color-grey-light);
   border-radius: 0.8rem;
@@ -72,12 +68,35 @@ body .container .header .nav .lang-bar .lang input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@media (max-width: 76.8rem) {
+  body header {
+    margin-left: 1.3rem;
+    margin-right: 3.3rem;
+  }
+  body header img {
+    width: 10rem;
+  }
+  body header .nav-content {
+    margin: 1.2rem 0rem 1.2rem 1.2rem;
+  }
+  body header .nav-content a {
+    margin-right: 1.2rem;
+    font-size: 1.2rem;
+  }
+  body header .nav-content .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  body header .lang-bar {
+    margin-left: 0;
+  }
+}
 body .landing {
-  width: auto;
+  width: 80%;
   height: 100vh;
 }
 body .landing .background-img {
-  background-size: cover;
+  background-size: inherit;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -223,7 +242,7 @@ body .landing .background-img .circle-2 img {
 }
 body .description {
   background-color: #F5FAFC;
-  width: 100%;
+  width: inherit;
   height: 30vh;
   margin-top: 5rem;
   display: -webkit-box;

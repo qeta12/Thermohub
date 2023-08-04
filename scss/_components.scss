@@ -1,9 +1,10 @@
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
+
+
 body {
-width: 136.6rem;
-.container {
-    width: 100vh;
     .header {
-        // width: 100vh;
+        
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -12,24 +13,26 @@ width: 136.6rem;
         
 
         .nav {
+            width: 100%;
 
             .nav-content {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-around;
                 flex-direction: row;
                 list-style-type: none;
-                margin: 5.2rem 0rem 5.2rem 5.2rem;
+                margin: 2.2rem 0rem 2.2rem 2.2rem;
+                
                     .active {
                         color: var(--color-green);
                         border-bottom: .2rem solid #6CB43F;
 
                     }
-                    
+                
                     a {
                         float: left;
                         text-align: center;
-                        margin-right: 5.2rem;
+                        margin-right: 1.2rem;
                         color: var(--color-grey-dark);
                         font-size: 1.4rem;
                         font-weight: 400;
@@ -70,15 +73,47 @@ width: 136.6rem;
             
         }
     }
-}
+    @media (max-width: 76.8rem) {
+
+    
+       
+       header {
+
+            margin-left: 1.3rem;
+            margin-right: 3.3rem;
+            
+            img {
+                    width: 10rem;
+                }
+            .nav-content {
+                margin: 1.2rem 0rem 1.2rem 1.2rem;
+                a {
+                    margin-right: 1.2rem;
+                    font-size: 1.2rem;
+                    
+                }
+                .icon {
+                    width: 1rem;
+                    height: 1rem;
+                    
+                    
+                }
+            }
+            .lang-bar {
+                margin-left: 0;
+            }
+        } 
+    }
+
+
 
     .landing {
-        width: auto;
+        width: 80%;
         height: 100vh;
 
        
         .background-img {
-          background-size: cover;
+          background-size: inherit;
           background-repeat: no-repeat;
           position: relative;
         
@@ -213,7 +248,7 @@ width: 136.6rem;
     }
     .description {
         background-color: #F5FAFC;
-        width: 100%;
+        width: inherit;
         height: 30vh;
         margin-top: 5rem;
         display: flex;
@@ -402,4 +437,3 @@ width: 136.6rem;
              }
         }
     }
-
