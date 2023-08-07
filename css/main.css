@@ -1,4 +1,4 @@
-body .header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,10 +11,44 @@ body .header {
   margin-left: 5.3rem;
   margin-right: 7.3rem;
 }
-body .header .nav {
-  width: 100%;
+@media (max-width: 768px) {
+  .header {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-body .header .nav .nav-content {
+.header .burger-manu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header .burger-manu {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .nav {
+    width: 20%;
+    display: block;
+  }
+  .nav .burger-manu {
+    width: 20%;
+    display: inline-block;
+    margin-left: 65rem;
+    margin-top: -25rem;
+  }
+}
+.nav .nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,11 +64,16 @@ body .header .nav .nav-content {
   list-style-type: none;
   margin: 2.2rem 0rem 2.2rem 2.2rem;
 }
-body .header .nav .nav-content .active {
+@media (max-width: 768px) {
+  .nav .nav-content {
+    display: none;
+  }
+}
+.nav .nav-content .active {
   color: var(--color-green);
   border-bottom: 0.2rem solid #6CB43F;
 }
-body .header .nav .nav-content a {
+.nav .nav-content a {
   float: left;
   text-align: center;
   margin-right: 1.2rem;
@@ -43,21 +82,21 @@ body .header .nav .nav-content a {
   font-weight: 400;
   text-decoration: none;
 }
-body .header .nav .nav-content .icon {
+.nav .nav-content .icon {
   width: 1.548rem;
   height: 1.603rem;
   margin-left: 0;
 }
-body .header .nav .lang-bar {
+.nav .lang-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 5.2rem;
 }
-body .header .nav .lang-bar .lang label {
+.nav .lang-bar .lang label {
   color: var(--color-grey-dark);
 }
-body .header .nav .lang-bar .lang input {
+.nav .lang-bar .lang input {
   border-style: solid;
   border-color: var(--color-grey-light);
   border-radius: 0.8rem;
@@ -68,46 +107,48 @@ body .header .nav .lang-bar .lang input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@media (max-width: 76.8rem) {
-  body header {
-    margin-left: 1.3rem;
-    margin-right: 3.3rem;
-  }
-  body header img {
-    width: 10rem;
-  }
-  body header .nav-content {
-    margin: 1.2rem 0rem 1.2rem 1.2rem;
-  }
-  body header .nav-content a {
-    margin-right: 1.2rem;
-    font-size: 1.2rem;
-  }
-  body header .nav-content .icon {
-    width: 1rem;
-    height: 1rem;
-  }
-  body header .lang-bar {
-    margin-left: 0;
+@media (max-width: 768px) {
+  .nav .lang-bar .lang-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
   }
 }
-body .landing {
+
+.landing {
   width: 80%;
   height: 100vh;
 }
-body .landing .background-img {
+@media (max-width: 768px) {
+  .landing {
+    width: 40%;
+  }
+}
+.landing .background-img {
   background-size: inherit;
   background-repeat: no-repeat;
   position: relative;
 }
-body .landing .background-img img {
+@media (max-width: 768px) {
+  .landing .background-img {
+    width: 75rem;
+  }
+}
+.landing .background-img img {
   width: 105.4%;
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: inherit;
+     object-fit: inherit;
   position: relative;
 }
-body .landing .background-img .rect {
+@media (max-width: 768px) {
+  .landing .background-img img {
+    width: 50%;
+    height: 50vh;
+  }
+}
+.landing .background-img .rect {
   width: 53.1rem;
   position: absolute;
   top: 1rem;
@@ -116,7 +157,7 @@ body .landing .background-img .rect {
   font-size: 3rem;
   font-weight: bold;
 }
-body .landing .background-img h2 {
+.landing .background-img h2 {
   width: 58.1rem;
   position: absolute;
   top: 26.2rem;
@@ -125,7 +166,12 @@ body .landing .background-img h2 {
   font-size: 3rem;
   font-weight: bold;
 }
-body .landing .background-img p {
+@media (max-width: 768px) {
+  .landing .background-img h2 {
+    font-size: 1.5rem;
+  }
+}
+.landing .background-img p {
   width: 58.1rem;
   position: absolute;
   top: 37.9rem;
@@ -135,14 +181,20 @@ body .landing .background-img p {
   font-size: 1.3rem;
   font-weight: regular;
 }
-body .landing .background-img form label {
+@media (max-width: 768px) {
+  .landing .background-img p {
+    left: 5.7rem;
+    font-size: 1rem;
+  }
+}
+.landing .background-img form label {
   width: 17.1rem;
   height: 5.4rem;
   position: absolute;
   top: 54.3rem;
   left: 11.8rem;
 }
-body .landing .background-img form label input {
+.landing .background-img form label input {
   width: 17.1rem;
   height: 3.4rem;
   border-radius: 2rem;
@@ -155,32 +207,32 @@ body .landing .background-img form label input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-body .landing .background-img form label input::-webkit-input-placeholder {
+.landing .background-img form label input::-webkit-input-placeholder {
   color: var(--color-white);
   font-size: 13;
   font-weight: bold;
 }
-body .landing .background-img form label input::-moz-placeholder {
+.landing .background-img form label input::-moz-placeholder {
   color: var(--color-white);
   font-size: 13;
   font-weight: bold;
 }
-body .landing .background-img form label input:-ms-input-placeholder {
+.landing .background-img form label input:-ms-input-placeholder {
   color: var(--color-white);
   font-size: 13;
   font-weight: bold;
 }
-body .landing .background-img form label input::-ms-input-placeholder {
+.landing .background-img form label input::-ms-input-placeholder {
   color: var(--color-white);
   font-size: 13;
   font-weight: bold;
 }
-body .landing .background-img form label input::placeholder {
+.landing .background-img form label input::placeholder {
   color: var(--color-white);
   font-size: 13;
   font-weight: bold;
 }
-body .landing .background-img form span {
+.landing .background-img form span {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -189,14 +241,14 @@ body .landing .background-img form span {
   top: 54.5rem;
   left: 25.7rem;
 }
-body .landing .background-img form span img {
+.landing .background-img form span img {
   width: 0.482rem;
   height: 0.964rem;
   position: absolute;
   top: 0.9rem;
   left: 1.4rem;
 }
-body .landing .background-img .circle-1 {
+.landing .background-img .circle-1 {
   width: 5.43rem;
   height: 5.43rem;
   border-radius: 50%;
@@ -210,7 +262,14 @@ body .landing .background-img .circle-1 {
   -webkit-box-shadow: 0.01rem 0.01rem #707070;
           box-shadow: 0.01rem 0.01rem #707070;
 }
-body .landing .background-img .circle-1 a img {
+@media (max-width: 768px) {
+  .landing .background-img .circle-1 {
+    width: 3.43rem;
+    height: 3.43rem;
+    left: 55rem;
+  }
+}
+.landing .background-img .circle-1 a img {
   width: 0.579rem;
   height: 1.157rem;
   position: absolute;
@@ -219,7 +278,13 @@ body .landing .background-img .circle-1 a img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-body .landing .background-img .circle-2 {
+@media (max-width: 768px) {
+  .landing .background-img .circle-1 a img {
+    top: 1.3rem;
+    left: 1.7rem;
+  }
+}
+.landing .background-img .circle-2 {
   width: 5.43rem;
   height: 5.43rem;
   border-radius: 50%;
@@ -233,14 +298,28 @@ body .landing .background-img .circle-2 {
   -webkit-box-shadow: 0.01rem 0.01rem #707070;
           box-shadow: 0.01rem 0.01rem #707070;
 }
-body .landing .background-img .circle-2 img {
+@media (max-width: 768px) {
+  .landing .background-img .circle-2 {
+    width: 3.43rem;
+    height: 3.43rem;
+    left: 65rem;
+  }
+}
+.landing .background-img .circle-2 img {
   width: 0.579rem;
   height: 1.157rem;
   position: absolute;
   top: 2rem;
   left: 2.5rem;
 }
-body .description {
+@media (max-width: 768px) {
+  .landing .background-img .circle-2 img {
+    top: 1.3rem;
+    left: 1.7rem;
+  }
+}
+
+.description {
   background-color: #F5FAFC;
   width: inherit;
   height: 30vh;
@@ -256,12 +335,25 @@ body .description {
           justify-content: center;
   gap: 6rem;
 }
-body .description h2 {
+@media (max-width: 768px) {
+  .description {
+    width: 10rem;
+    margin-left: -25rem;
+    gap: 0;
+    display: inline-block;
+  }
+}
+.description h2 {
   color: var(--color-green);
   font-size: 30;
   font-weight: bold;
 }
-body .description .text {
+@media (max-width: 768px) {
+  .description h2 {
+    width: 5rem;
+  }
+}
+.description .text {
   width: 68rem;
   line-height: 1.8rem;
   display: -webkit-box;
@@ -279,10 +371,24 @@ body .description .text {
           flex-direction: column;
   gap: 2rem;
 }
-body .clients {
+@media (max-width: 768px) {
+  .description .text {
+    width: 5rem;
+    gap: 0;
+  }
+}
+
+.clients {
   padding: 3rem;
 }
-body .clients h2 {
+@media (max-width: 768px) {
+  .clients {
+    margin-left: -50rem;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+}
+.clients h2 {
   padding: 3rem 0 3rem 59rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -291,7 +397,13 @@ body .clients h2 {
   font-size: 30;
   font-weight: bold;
 }
-body .clients-logos {
+@media (max-width: 768px) {
+  .clients h2 {
+    padding: 0;
+    margin-left: 25rem;
+  }
+}
+.clients-logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +417,7 @@ body .clients-logos {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-body .clients-logos-description {
+.clients-logos-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,17 +430,28 @@ body .clients-logos-description {
   gap: 3rem;
   border-style: solid #E1E1E1;
 }
-body .clients-logos-description .line-coca {
+@media (max-width: 768px) {
+  .clients-logos-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.clients-logos-description .line-coca {
   width: 3.7rem;
   height: 0.3rem;
   margin-left: -9.7rem;
 }
-body .clients-logos-description .line-nike {
+.clients-logos-description .line-nike {
   width: 3.7rem;
   height: 0.3rem;
   margin-left: 3rem;
 }
-body .clients-logos-description-container-1, body .clients-logos-description-container-3, body .clients-logos-description-container-4 {
+.clients-logos-description-container-1, .clients-logos-description-container-3, .clients-logos-description-container-4 {
   padding: 2rem 4rem;
   border: 0.1rem solid #E1E1E1;
   display: -webkit-box;
@@ -343,28 +466,28 @@ body .clients-logos-description-container-1, body .clients-logos-description-con
           flex-direction: column;
   gap: 1.5rem;
 }
-body .clients-logos-description-container-1 .line, body .clients-logos-description-container-3 .line, body .clients-logos-description-container-4 .line {
+.clients-logos-description-container-1 .line, .clients-logos-description-container-3 .line, .clients-logos-description-container-4 .line {
   width: 3.7rem;
   height: 0.3rem;
   margin-left: 6rem;
 }
-body .clients-logos-description-container-1 span, body .clients-logos-description-container-3 span, body .clients-logos-description-container-4 span {
+.clients-logos-description-container-1 span, .clients-logos-description-container-3 span, .clients-logos-description-container-4 span {
   text-align: center;
 }
-body .clients-logos-description-container-2 {
+.clients-logos-description-container-2 {
   width: 15.4rem;
   height: 10.7rem;
   padding: 0.8rem 2rem;
   border: 0.1rem solid #E1E1E1;
 }
-body .clients-logos-description-container-2 img {
+.clients-logos-description-container-2 img {
   width: 13.6rem;
   height: 7.9rem;
 }
-body .clients-logos-description-container-2 span {
+.clients-logos-description-container-2 span {
   margin-left: 3.9rem;
 }
-body .clients-circle-1 {
+.clients-circle-1 {
   width: 3.9rem;
   height: 3.9rem;
   border-radius: 50%;
@@ -377,8 +500,15 @@ body .clients-circle-1 {
           align-items: center;
   -webkit-box-shadow: 0.01rem 0.01rem #707070;
           box-shadow: 0.01rem 0.01rem #707070;
+  z-index: 1;
 }
-body .clients-circle-1 a img {
+@media (max-width: 768px) {
+  .clients-circle-1 {
+    top: 38rem;
+    left: 3rem;
+  }
+}
+.clients-circle-1 a img {
   width: 0.579rem;
   height: 1.157rem;
   position: absolute;
@@ -387,28 +517,30 @@ body .clients-circle-1 a img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-body .clients-circle-2 {
+.clients-circle-2 {
   width: 3.9rem;
   height: 3.9rem;
   border-radius: 50%;
   background-color: var(--color-white);
   position: absolute;
-  top: 138.8rem;
+  top: 135.8rem;
   left: 69.64rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-shadow: 0.01rem 0.01rem #707070;
           box-shadow: 0.01rem 0.01rem #707070;
+  z-index: 1;
 }
-body .clients-circle-2 a img {
+.clients-circle-2 a img {
   width: 0.579rem;
   height: 1.157rem;
   position: absolute;
-  top: 1.3rem;
-  left: 2rem;
+  top: 1.4rem;
+  left: 1.95rem;
 }
-body .contact-container {
+
+.contact-container {
   background-color: #FDFDFD;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,12 +552,31 @@ body .contact-container {
   margin: 5rem;
   position: relative;
 }
-body .contact-container .map {
+@media (max-width: 768px) {
+  .contact-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+    margin: 1rem;
+  }
+}
+.contact-container .map {
   margin-top: 5rem;
   width: 60%;
   height: 19.9rem;
 }
-body .contact-container-details {
+@media (max-width: 768px) {
+  .contact-container .map {
+    width: 40%;
+    margin-left: -60rem;
+  }
+}
+.contact-container-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,13 +586,13 @@ body .contact-container-details {
           flex-direction: column;
   gap: 1.5rem;
 }
-body .contact-container-details span {
+.contact-container-details span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
 }
-body .contact-container-logos {
+.contact-container-logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,9 +600,9 @@ body .contact-container-logos {
   margin-top: -7rem;
   margin-left: 0.5rem;
 }
-body .contact-container-logos .facebook,
-body .contact-container-logos .youtube,
-body .contact-container-logos .instagram {
+.contact-container-logos .facebook,
+.contact-container-logos .youtube,
+.contact-container-logos .instagram {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -459,19 +610,32 @@ body .contact-container-logos .instagram {
   border: 0.2rem solid #EFEFEF;
   position: relative;
 }
-body .contact-container-logos .facebook img,
-body .contact-container-logos .youtube img,
-body .contact-container-logos .instagram img {
+.contact-container-logos .facebook img,
+.contact-container-logos .youtube img,
+.contact-container-logos .instagram img {
   position: absolute;
   top: 1rem;
   left: 1rem;
 }
-body .contact-container .legal {
+@media (max-width: 768px) {
+  .contact-container-logos .facebook,
+  .contact-container-logos .youtube,
+  .contact-container-logos .instagram {
+    position: none;
+  }
+}
+.contact-container .legal {
   position: absolute;
   top: 75%;
   left: 80%;
 }
-body .contact-container .legal span {
+@media (max-width: 768px) {
+  .contact-container .legal {
+    top: 100%;
+    left: -80%;
+  }
+}
+.contact-container .legal span {
   color: var(--color-green);
 }
 
@@ -577,7 +741,6 @@ body .landing {
   height: 100vh;
 }
 body .landing .background-img {
-  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -851,7 +1014,7 @@ body .clients-circle-1 {
   border-radius: 50%;
   background-color: var(--color-white);
   position: absolute;
-  top: 138.8rem;
+  top: 136rem;
   left: 63.64rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -874,7 +1037,7 @@ body .clients-circle-2-pro {
   border-radius: 50%;
   background-color: var(--color-green);
   position: absolute;
-  top: 138.8rem;
+  top: 136rem;
   left: 69.64rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
