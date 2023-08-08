@@ -18,6 +18,15 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     width: 100vh;
+    @media (max-width: 102.4) {
+        font-size: 55%;
+    }
+    @media (max-width: 76.8rem) {
+        font-size: 50%;
+    }
+    @media (max-width: 32rem) {
+        font-size: 35%;
+    }
 }
 
 body {
